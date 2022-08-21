@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm lại ví dụ 1</title>
+    <script src="./Vendor/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="costApp" ng-controller="costController">
+
+        <div>
+            <input type = "number" ng-model="qty" required placeholder="Input quantity">
+        </div>
+        <div>
+            <input type = "number" ng-model="cost" required placeholder="Input cost">
+        </div>
+        <div>
+            <button class="btn" ng-click="pay()">Amount</button>
+        </div>
+        <div>
+            <b>Toltal amount = </b> {{ total | currency: "$ " }}
+        </div>
+        <script>
+            var app = angular.module("costApp",[]);
+            app.controller("costController", function ($scope) {
+                $scope.qty = 0;
+                $scope.cost = 0;
+                $scope.total = 0;
+                $scope.pay = function () {
+                    this.total = this.qty * this.cost
+                };
+            });
+        </script>
+    </div>
+
+</body>
+</html>

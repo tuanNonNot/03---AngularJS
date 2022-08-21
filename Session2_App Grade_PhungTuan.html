@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhap diem ly thuyet, thuc hanh -> dua ra KQ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="xetDiem" ng-controller="xetDiemController">
+        <div>
+            <input type="number" ng-model="dLyThuyet" placeholder="Nhap diem ly thuyet" required>
+        </div>
+        <div>
+            <input type="number" ng-model="dThucHanh" placeholder="Nhap diem thuc hanh" required>
+        </div>
+        <div>
+            <button class="btn" ng-click="kqRun()">Ket qua</button>
+        </div>
+        <div>
+            <label> <b>Ket qua: </b> {{kqDiem}}</label>
+        </div>
+
+        <script>
+            var app = angular.module("xetDiem",[]);
+            app.controller("xetDiemController", function ($scope) {
+                $scope.kqDiem = "unknown";
+                $scope.kqRun = function () {
+                    if (this.dLyThuyet >= 5 && this.dThucHanh >= 5) {
+                        this.kqDiem = "Dat";
+                    } else {
+                        this.kqDiem = "False";
+                    }
+                };
+            });
+        </script>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Code snippet7</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+<body>
+   <div ng-app="myApp" ng-controller="myController">
+   		<p>Hello</p>
+      <p>Welcome to {{course}}</p>
+   </div>
+   <script type="text/javascript">
+     var app=angular.module('myApp', []);
+     app.controller("myController", function ($scope){
+      $scope.course = "AngularJS";
+     });
+   </script>
+</body>
+</html>
