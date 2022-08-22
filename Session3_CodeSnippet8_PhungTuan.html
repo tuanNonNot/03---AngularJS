@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
+    <script src="./Vendor/angular.min.js"></script>
+    <!-- Mang nha em loi, co giao nhe -->
+</head>
+
+<body ng-app="">
+    <p>Do you want to hide the list of cities?</p>
+    <input type="checkbox" ng-model="myVar">
+    <div ng-show="myVar">
+        <h1>Welcome to ng-show directive example</h1>
+        <p>A solution of ng-show directive.</p>
+    </div>
+</body>
+
+</html>

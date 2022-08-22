@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"> </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
+    <script src="./Vendor/angular.min.js"></script> -->
+    <!-- Mang nha em loi, co giao nhe -->
+</head>
+
+<body ng-app="spApp">
+    <h1>ng-include directive</h1>
+    <div ng-controller="SPController" class="container">
+        <div ng-include="'Session3_CodeSnippet10_mainContent_PhungTuan.html'"></div>
+        <div ng-include="'Session3_CodeSnippet11_sidebar_PhungTuan.html'"></div>
+    </div>
+</body>
+<script>
+var MyApp = angular.module("spApp", []);
+MyApp.controller("SPController", function($scope) {
+    $scope.quantity = 1;
+    $scope.price = 9.99;
+});
+</script>
+
+</html>
